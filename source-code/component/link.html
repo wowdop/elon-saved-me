@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>link</title>
+    <style>
+      .link {
+        background-color: hsl(204, 94%, 94%);
+        border-radius: 8px;
+        gap: 8px;
+        display: inline-flex;
+        padding: 4px 8px;
+        transition: 300ms;
+      }
+
+      .link:hover {
+        background-color: hsl(204, 94%, 6%);
+      }
+
+      .link__leading,
+      .link__end {
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-size: 69%;
+        background-repeat: no-repeat;
+      }
+
+      .link__leading {
+        background-image: url(link.png);
+      }
+
+      .link__end {
+        background-image: url(fat-arrow.png);
+
+      }
+
+      .link__text {
+        color: hsl(220, 75%, 38%);
+      }
+      .link__text:hover {
+        color: hsl(220, 75%, 62%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>link</h1>
+    <div class="link">
+      <div class="link__leading"></div>
+      <div class="link__text">Visit source for more info</div>
+      <div class="link__end"></div>
+    </div>
+  </body>
+</html>
