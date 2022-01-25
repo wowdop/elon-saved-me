@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  color: hsl(233, 86%, 67%);
+}
+
+:root {
+  --menu-color-hue: 221;
+  --menu-color-saturation: 13%;
+}
+
+[theme="success"] {
+  --menu-color-hue: 152;
+  --menu-color-saturation: 82%;
+}
+
+[theme="indigo"] {
+  --menu-color-hue: 233;
+  --menu-color-saturation: 86%;
+}
+
+[theme="orange"] {
+  --menu-color-hue: 21;
+  --menu-color-saturation: 97%;
+}
+
+[theme="pink"] {
+  --menu-color-hue: 318;
+  --menu-color-saturation: 83%;
+}
+
+[theme="blue"] {
+  --menu-color-hue: 211;
+  --menu-color-saturation: 95%;
+}
+
+[theme="blue-light"] {
+  --menu-color-hue: 199;
+  --menu-color-saturation: 91%;
+}
+
+[theme="blue-gray"] {
+  --menu-color-hue: 232;
+  --menu-color-saturation: 36%;
+}
+
+[class^="menu__icon--"] {
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+
+[class^="menu__icon--"]::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+}
+
+.menu__icon--home {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    70%
+  );
+}
+
+.menu__icon--home::before {
+  background-image: url(../../asset/image/icon/home.png);
+}
+
+.menu__icon--burger {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    60%
+  );
+}
+
+.menu__icon--burger::before {
+  background-image: url(../../asset/image/icon/hamburger.png);
+}
+
+.menu__icon--next {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    50%
+  );
+}
+
+.menu__icon--next::before {
+  background-image: url(../../asset/image/icon/arrow-right.png);
+}
+
+.menu__icon--close {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    50%
+  );
+}
+
+.menu__icon--close:before {
+  background-image: url(../../asset/image/icon/cross.png);
+}
+
+.menu__title {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    40%
+  );
+  height: 56px;
+  width: 375px;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.menu__body,
+.menu__top {
+  display: flex;
+}
+
+[pozitie="sus"] {
+  top: 0;
+  bottom: initial;
+}
+
+[first] {
+  order: 1;
+}
