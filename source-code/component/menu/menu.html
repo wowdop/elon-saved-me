@@ -106,6 +106,18 @@
         background-image: url(../../asset/image/icon/arrow-right.png);
       }
 
+      .menu__icon--close {
+        background-color: hsl(
+          var(--menu-color-hue),
+          var(--menu-color-saturation),
+          50%
+        );
+      }
+
+      .menu__icon--close:before {
+        background-image: url(../../asset/image/icon/cross.png);
+      }
+
       .menu__title {
         background-color: hsl(
           var(--menu-color-hue),
@@ -138,14 +150,18 @@
         /* height: 56px; */
       }
 
-      [pozitie="sus"] > .menu__top,
+      /* [pozitie="sus"] > .menu__top,
       [pozitie="sus"] > .menu__body > .menu__icon--next {
         display: none;
-      }
+      } */
 
       [pozitie="sus"] {
         top: 0;
         bottom: initial;
+      }
+
+      [first] {
+        order: 1;
       }
     </style>
   </head>
@@ -247,14 +263,50 @@
       </div>
     </div>
 
-    <div class="menu" theme="blue-gray" pozitie="sus">
-      <div class="menu__top">
-        <div class="menu__icon--home"></div>
-        <div class="menu__icon--burger"></div>
-      </div>
-
+    <!-- <div class="menu" theme="blue-gray" pozitie="sus">
       <div class="menu__body">
         <div class="menu__title">Elon Musk Saved My Life</div>
+      </div>
+    </div> -->
+
+    <div class="menu" theme="blue">
+      <div class="menu__top">
+        <div class="menu__icon--home"></div>
+        <div class="menu__icon--close"></div>
+      </div>
+
+      <div class="menu__body" theme="orange">
+        <div class="menu__title">Elon Musk Saved My Life1</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="pink">
+        <div class="menu__title">Elon Musk Saved My Life2</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="indigo">
+        <div class="menu__title">Elon Musk Saved My Life3</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="blue" first>
+        <div class="menu__title">Elon Musk Saved My Life4</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="blue-light">
+        <div class="menu__title">Elon Musk Saved My Life5</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="blue-gray">
+        <div class="menu__title">Elon Musk Saved My Life6</div>
+        <div class="menu__icon--next"></div>
+      </div>
+
+      <div class="menu__body" theme="success">
+        <div class="menu__title">Elon Musk Saved My Life7</div>
         <div class="menu__icon--next"></div>
       </div>
     </div>
