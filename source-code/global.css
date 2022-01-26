@@ -7,6 +7,10 @@
   display: grid;
 }
 
+#toggle-menu:checked + .menu__top .menu__icon--burger::before {
+  background-image: url(../../asset/icon/cross.png);
+}
+
 /* global */
 * {
   box-sizing: border-box;
