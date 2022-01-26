@@ -1,0 +1,47 @@
+.card__image {
+  width: 80px;
+  height: 45px;
+  background-image: var(--ipath);
+  background-size: cover;
+  margin: 4px;
+  display: block;
+  /* transition: 250ms; */
+}
+
+#mumi-dumi-1:checked ~ .card__image-list .card__image:nth-child(1) {
+  width: 320px;
+  height: 180px;
+  order: -1;
+  width: 100%;
+}
+
+#mumi-dumi-2:checked ~ .card__image-list .card__image:nth-child(2) {
+  width: 320px;
+  height: 180px;
+  order: -1;
+  width: 100%;
+}
+
+#mumi-dumi-3:checked ~ .card__image-list .card__image:nth-child(3) {
+  width: 320px;
+  height: 180px;
+  order: -1;
+  width: 100%;
+}
+
+#mumi-dumi-4:checked ~ .card__image-list .card__image:nth-child(4) {
+  width: 320px;
+  height: 180px;
+  order: -1;
+  width: 100%;
+}
+
+[type="radio"] {
+  display: none;
+}
+
+.card__image-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+}
