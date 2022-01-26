@@ -131,6 +131,8 @@
   width: 100%;
   color: white;
   grid-column: 1/-1;
+
+  text-decoration: none;
 }
 
 .menu {
@@ -152,7 +154,7 @@
   grid-column: 1/2;
 }
 
-.menu__top + .menu__body .menu__title {
+.menu__top ~ .menu__body .menu__title {
   grid-column: 1/2;
 }
 
