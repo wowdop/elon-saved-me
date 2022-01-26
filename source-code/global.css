@@ -1,3 +1,12 @@
+/* input checkbox */
+#toggle-menu {
+  display: none;
+}
+
+#toggle-menu:checked ~ .menu__body {
+  display: grid;
+}
+
 /* global */
 * {
   box-sizing: border-box;
@@ -25,6 +34,10 @@ body {
 .grid {
   display: grid;
   grid-gap: 1rem;
+}
+
+.grid > .menu:first-child > .menu__body {
+  display: block;
 }
 
 @media screen and (min-width: 48rem) {
