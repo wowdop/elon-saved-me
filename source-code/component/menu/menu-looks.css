@@ -70,7 +70,7 @@
 }
 
 .menu__icon--home::before {
-  background-image: url(../../asset/image/icon/home.png);
+  background-image: url(../../asset/icon/home.png);
 }
 
 .menu__icon--burger {
@@ -82,7 +82,7 @@
 }
 
 .menu__icon--burger::before {
-  background-image: url(../../asset/image/icon/hamburger.png);
+  background-image: url(../../asset/icon/hamburger.png);
 }
 
 .menu__icon--next {
@@ -94,7 +94,7 @@
 }
 
 .menu__icon--next::before {
-  background-image: url(../../asset/image/icon/arrow-right.png);
+  background-image: url(../../asset/icon/arrow-right.png);
 }
 
 .menu__icon--close {
@@ -106,7 +106,7 @@
 }
 
 .menu__icon--close:before {
-  background-image: url(../../asset/image/icon/cross.png);
+  background-image: url(../../asset/icon/cross.png);
 }
 
 .menu__title {
@@ -116,7 +116,6 @@
     40%
   );
   height: 56px;
-  width: 375px;
   font-family: "Inter";
   font-size: 18px;
   font-weight: 500;
@@ -124,21 +123,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   color: white;
+  grid-column: 1/-1;
 }
 
 .menu {
   display: flex;
-  align-items: end;
   flex-direction: column;
   position: fixed;
   bottom: 0;
   right: 0;
+  width: 100%;
 }
 
-.menu__body,
 .menu__top {
+  justify-content: flex-end;
   display: flex;
+  width: 100%;
+}
+
+.menu__top + .menu__body {
+  grid-column: 1/2;
+}
+
+.menu__top + .menu__body .menu__title {
+  grid-column: 1/2;
+}
+
+.menu__body {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 56px;
 }
 
 [pozitie="sus"] {
