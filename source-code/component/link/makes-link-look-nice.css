@@ -6,6 +6,7 @@
   padding: 4px 8px;
   transition: 300ms;
   cursor: pointer;
+  box-shadow: 0.125rem 0.125rem 0.125rem hsla(267, 100%, 25%, 0.125);
 }
 
 .link__text {

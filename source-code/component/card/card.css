@@ -8,51 +8,84 @@
   gap: 1rem;
 }
 
+@media screen and (min-width: 1280px) {
+  .card {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .card:nth-child(odd) .card__gallery {
+    grid-column-start: 2;
+  }
+  .card:nth-child(odd) .card__content {
+    grid-column-start: 1;
+  }
+
+  .card {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__gallery {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+
+  .card__content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+
+  .card__action {
+    grid-column: 1/-1;
+    grid-row-start: 2;
+  }
+}
+
 .card__image {
   border-radius: 0.25rem;
-  width: calc(80rem / 16);
-  height: calc(45rem / 16);
   background-image: var(--ipath);
   background-size: cover;
-  margin: 0.25rem;
-  display: block;
   cursor: pointer;
   outline: 0.25rem solid transparent;
+  width: 100%;
+  padding-top: calc(900% / 16);
+  box-shadow: 0 0 0.25rem hsla(267, 100%, 25%, 0.5);
 }
 
 #mumi-dumi-1:checked ~ .card__image-list .card__image:nth-child(1) {
-  width: 20rem;
-  height: calc(180rem / 16);
-  order: -1;
+  grid-column: 1/-1;
+  grid-row-start: 1;
   width: 100%;
-  outline: 0.25rem solid #F4EBFF;
+  box-shadow: 0 0 0.25rem hsla(267, 100%, 25%, 0.25);
   border-radius: 0.25rem;
 }
 
 #mumi-dumi-2:checked ~ .card__image-list .card__image:nth-child(2) {
-  width: 20rem;
-  height: calc(180rem / 16);
-  order: -1;
+  grid-column: 1/-1;
+  grid-row-start: 1;
   width: 100%;
-  outline: 0.25rem solid #F4EBFF;
+  box-shadow: 0 0 0.25rem hsla(267, 100%, 25%, 0.25);
   border-radius: 0.25rem;
 }
 
 #mumi-dumi-3:checked ~ .card__image-list .card__image:nth-child(3) {
-  width: 20rem;
-  height: calc(180rem / 16);
-  order: -1;
+  grid-column: 1/-1;
+  grid-row-start: 1;
   width: 100%;
-  outline: 0.25rem solid #F4EBFF;
+  box-shadow: 0 0 0.25rem hsla(267, 100%, 25%, 0.25);
   border-radius: 0.25rem;
 }
 
 #mumi-dumi-4:checked ~ .card__image-list .card__image:nth-child(4) {
-  width: 20rem;
-  height: calc(180rem / 16);
-  order: -1;
+  grid-column: 1/-1;
+  grid-row-start: 1;
   width: 100%;
-  outline: 0.25rem solid #F4EBFF;
+  box-shadow: 0 0 0.25rem hsla(267, 100%, 25%, 0.25);
   border-radius: 0.25rem;
 }
 
@@ -61,11 +94,12 @@
 }
 
 .card__image-list {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-  width: 20rem;
-  gap: 0.25rem;
-  /* padding: 0.25rem; */
+  grid-gap: 0.25rem;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
 
 .card__title {
