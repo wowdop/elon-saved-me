@@ -28,6 +28,11 @@
   --menu-color-saturation: 83%;
 }
 
+[theme="rose"] {
+  --menu-color-hue: 346;
+  --menu-color-saturation: 91%;
+}
+
 [theme="blue"] {
   --menu-color-hue: 211;
   --menu-color-saturation: 95%;
