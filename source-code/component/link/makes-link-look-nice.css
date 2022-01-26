@@ -1,0 +1,37 @@
+.link {
+  background-color: hsl(204, 94%, 94%);
+  border-radius: 8px;
+  gap: 8px;
+  display: inline-flex;
+  padding: 4px 8px;
+  transition: 300ms;
+  cursor: pointer;
+  box-shadow: 0.125rem 0.125rem 0.125rem hsla(267, 100%, 25%, 0.125);
+}
+
+.link__text {
+  /* color: hsl(220, 75%, 38%); */
+}
+
+.link:hover {
+  background-color: hsl(205, 42%, 54%);
+  color: hsl(0, 53%, 14%);
+}
+
+.link__leading,
+.link__end {
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-size: 69%;
+  background-repeat: no-repeat;
+}
+
+.link__leading {
+  background-image: url(../../asset/icon/link.png);
+}
+
+.link__end {
+  background-image: url(../../asset/icon/fat-arrow.png);
+
+}
