@@ -1,9 +1,12 @@
+/* https://fonts.google.com/specimen/Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
 /* input checkbox */
 #toggle-menu {
   display: none;
 }
 
-#toggle-menu:checked ~ .menu__body {
+#toggle-menu:checked ~ div.menu__body {
   display: grid;
 }
 
@@ -28,39 +31,53 @@ body {
   background-color: hsl(
     var(--menu-color-hue),
     var(--menu-color-saturation),
-    94%
+    97%
   );
 
   font-family: Inter;
 }
 
-/* layout */
 .grid {
+  background-color: hsl(
+    var(--menu-color-hue),
+    var(--menu-color-saturation),
+    94%
+  );
+  height: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* layout */
+
+section {
   display: grid;
   grid-gap: 1rem;
 }
 
-.grid > .menu:first-child > .menu__body {
+section > .menu:first-child > .menu__body {
   display: block;
 }
 
 @media screen and (min-width: 48rem) {
-  .grid {
+  section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 80rem) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  section {
+    /* grid-template-columns: repeat(3, 1fr); */
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }
 
 section {
-  display: flex;
   padding: 2rem;
   gap: 1rem;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .divider {

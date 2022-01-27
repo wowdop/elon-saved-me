@@ -8,57 +8,57 @@
   --menu-color-saturation: 13%;
 }
 
-[theme="success"] {
+[theme='success'] {
   --menu-color-hue: 152;
   --menu-color-saturation: 82%;
 }
 
-[theme="indigo"] {
+[theme='indigo'] {
   --menu-color-hue: 233;
   --menu-color-saturation: 86%;
 }
 
-[theme="orange"] {
+[theme='orange'] {
   --menu-color-hue: 21;
   --menu-color-saturation: 97%;
 }
 
-[theme="pink"] {
+[theme='pink'] {
   --menu-color-hue: 318;
   --menu-color-saturation: 83%;
 }
 
-[theme="rose"] {
+[theme='rose'] {
   --menu-color-hue: 346;
   --menu-color-saturation: 91%;
 }
 
-[theme="blue"] {
+[theme='blue'] {
   --menu-color-hue: 211;
   --menu-color-saturation: 95%;
 }
 
-[theme="blue-light"] {
+[theme='blue-light'] {
   --menu-color-hue: 199;
   --menu-color-saturation: 91%;
 }
 
-[theme="blue-gray"] {
+[theme='blue-gray'] {
   --menu-color-hue: 232;
   --menu-color-saturation: 36%;
 }
 
-[class^="menu__icon--"] {
+[class^='menu__icon--'] {
   width: 56px;
   height: 56px;
   position: relative;
 }
 
-[class^="menu__icon--"]::before {
+[class^='menu__icon--']::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  content: "";
+  content: '';
   position: absolute;
   top: 16px;
   bottom: 16px;
@@ -121,7 +121,7 @@
     40%
   );
   height: 56px;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-size: 18px;
   font-weight: 500;
   padding: 0 16px;
@@ -133,6 +133,12 @@
   grid-column: 1/-1;
 
   text-decoration: none;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 56px;
 }
 
 .menu {
@@ -162,13 +168,14 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr 56px;
+  text-decoration: none;
 }
 
-.menu__body:not([first]) {
+#toggle-menu ~ .menu__body:not([first]) {
   display: none;
 }
 
-[pozitie="sus"] {
+[pozitie='sus'] {
   top: 0;
   bottom: initial;
 }

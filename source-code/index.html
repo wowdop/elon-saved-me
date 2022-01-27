@@ -16,7 +16,12 @@
       <!-- .menu[theme="gray"]>.menu__top>.menu__icon--home+.menu__icon--burger^.menu__body>.menu__title{Change me}+.menu__icon--next -->
       <div class="menu" theme="success" pozitie="sus">
         <div class="menu__body">
-          <div class="menu__title">Elon Musk Saved My Life</div>
+          <div
+            class="menu__title"
+            title="Elon Musk Saved My Life and might have saved yours too"
+          >
+            Elon Musk Saved My Life and might have saved yours too
+          </div>
         </div>
       </div>
 
@@ -81,20 +86,27 @@
       <div class="divider"></div>
 
       <div class="menu" theme="blue-gray">
-        <input id="toggle-menu" type="checkbox">
+        <input id="toggle-menu" type="checkbox" />
 
         <div class="menu__top">
           <!-- <div class="menu__icon--home"></div> -->
           <label for="toggle-menu" class="menu__icon--burger"></label>
         </div>
 
-        <div class="menu__body" theme="blue-gray" first>
-          <a href="/1500000000-cars-worldwide" class="menu__title">1.5 billion cars worldwide</a>
-          <div class="menu__icon--next"></div>
-        </div>
+        <a
+          class="menu__body"
+          theme="blue-gray"
+          first
+          href="/1500000000-cars-worldwide"
+        >
+          <span class="menu__title">1.5 billion cars worldwide</span>
+          <span class="menu__icon--next"></span>
+        </a>
 
         <div class="menu__body" theme="blue-light">
-          <a href="/pollution-deaths-research" class="menu__title">pollution deaths research</a>
+          <a href="/pollution-deaths-research" class="menu__title"
+            >pollution deaths research</a
+          >
           <div class="menu__icon--next"></div>
         </div>
 
