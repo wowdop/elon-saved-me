@@ -164,7 +164,7 @@
   grid-template-columns: 1fr 56px;
 }
 
-.menu__body:not([first]) {
+#toggle-menu ~ .menu__body:not([first]) {
   display: none;
 }
 

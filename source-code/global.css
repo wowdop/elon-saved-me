@@ -3,7 +3,7 @@
   display: none;
 }
 
-#toggle-menu:checked ~ .menu__body {
+#toggle-menu:checked ~ div.menu__body {
   display: grid;
 }
 
@@ -35,32 +35,32 @@ body {
 }
 
 /* layout */
-.grid {
+section {
   display: grid;
   grid-gap: 1rem;
 }
 
-.grid > .menu:first-child > .menu__body {
+section > .menu:first-child > .menu__body {
   display: block;
 }
 
 @media screen and (min-width: 48rem) {
-  .grid {
+  section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 80rem) {
-  .grid {
+  section {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 section {
-  display: flex;
   padding: 2rem;
   gap: 1rem;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .divider {
